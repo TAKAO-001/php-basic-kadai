@@ -8,8 +8,8 @@
 <body>
  <p>
      <?php
-       function sort_2way($array, $ascending = true) {
-            if ($ascending) {
+       function sort_2way($array, $order = true) {
+            if ($order) {
               sort($array); //昇順ソート
             } else {
               rsort($array); //降順ソート
