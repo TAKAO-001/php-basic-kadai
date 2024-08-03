@@ -7,31 +7,23 @@
 </head>
 <body>
  <p>
-     <?php
-       function sort_2way($array, $order = true) {
-            if ($order) {
-              sort($array); //昇順ソート
-            } else {
-              rsort($array); //降順ソート
-            }
-            return $array;
+ <?php
+  function sort_2way($array,$order) {
+        if ($order) {
+            echo '昇順にソートします。<br>';
+            sort($array); //昇順ソート
+        } else {
+            echo '降順にソートします。<br>';
+            rsort($array); //降順ソート
         }
-        $nums = [15, 4, 18, 23, 10];
-        
-        //昇順
-        $sorted_asc = sort_2way($nums, true);
-        echo '昇順にソートします。<br>';
-        foreach($sorted_asc as $value){
-             echo $value . '<br>';
+        foreach($array as $nam){
+            echo $nam . '<br>';
         }
-        
-        //降順
-        $sorted_desc = sort_2way($nums, false);
-        echo '降順にソートします。<br>';
-        foreach($sorted_desc as $value){
-             echo $value . '<br>';
-        }
-     ?>
+      }  
+       $nums = [15, 4, 18, 23, 10];
+       sort_2way($nums,ture);
+       sort_2way($nums,false);
+ ?>
  </p>
 </body>
 </html>
