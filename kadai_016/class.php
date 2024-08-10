@@ -17,34 +17,34 @@
             $this->price = $price;
             }
          public function show_price(){
-            return $this->price;
+            echo $this->price.'<br>';
             }   
         }
-         $food = new Food('potato',250);
-         print_r($food);
-         echo '<br>';
 
         class Animal{
             private $name;
             Private $height;
             private $weight;
-         
+            
          public function __construct(string $name,int $height,int $weight){
             $this->name = $name;
             $this->height = $height;
             $this->weight = $weight;
             } 
          public function show_height(){
-            return $this->height;
+            echo $this->height;
             } 
         }
-         $animal = new Animal ('dog',60,5000);
-         print_r($animal);
-         echo '<br>';
-
-         echo $food->show_price().'<br>';
-         echo $animal->show_height().'<br>';
         
+        $food = new Food('potato',250);
+        $animal = new Animal ('dog',60,5000);
+        
+        print_r($food);
+        echo '<br>';
+        print_r($animal);
+        echo '<br>';
+        $food->show_price().'<br>';
+        $animal->show_height().'<br>';
     ?>
 </p>
 </body>
